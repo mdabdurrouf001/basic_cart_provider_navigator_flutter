@@ -96,7 +96,10 @@ class ItemList extends StatelessWidget {
                       title: Text(cartList[index]),
                       trailing: IconButton(
                         icon: const Icon(Icons.remove),
-                        onPressed: () {},
+                        onPressed: () {
+                          var operations = context.read<Operations>();
+                          operations.removeItem(cartList[index]);
+                        },
                       ),
                     );
                   },
