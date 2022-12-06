@@ -2,8 +2,8 @@ import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../main.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CartList extends StatelessWidget {
   const CartList({super.key});
@@ -34,7 +34,12 @@ class CartList extends StatelessWidget {
                   itemCount: cartList.length,
                   itemBuilder: (BuildContext context, int index) {
                     return ListTile(
-                      title: Text(cartList[index]),
+                      title: Text(
+                        cartList[index],
+                        style: GoogleFonts.cabin(
+                          textStyle: TextStyle(fontSize: 15),
+                        ),
+                      ),
                       trailing: IconButton(
                         icon: const Icon(Icons.remove),
                         onPressed: () {

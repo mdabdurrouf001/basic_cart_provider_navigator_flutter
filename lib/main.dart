@@ -4,23 +4,29 @@ import 'package:basic_cart_provider_navigator_flutter/screen/cartList.dart';
 import 'package:basic_cart_provider_navigator_flutter/screen/itemList.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 List<String> itemList = [
-  "One",
-  "Two",
-  "Three",
-  "Four",
-  "Five",
-  "Six",
-  "Seven",
-  "Eight",
-  "Nine",
-  "Ten",
+  "Ball Cactus",
+  "Aloe Vera",
+  "Panda Plant",
+  "Money Plant",
+  "Dolphin Succulent",
+  "Bunny Ears Cactus",
+  "Pothos",
+  "Monstera",
+  "Lucky Bamboo",
+  "Spider Plant",
+  "Snake Plant",
+  "Olivia",
+  "Christmas Cactus",
+  "Panda Plant",
+  "Easter Cactus",
+  "Old Lady Cactus",
+  "Star Cactus"
 ];
 
-List<String> cartList = [
-  "One",
-];
+List<String> cartList = [];
 
 void main() {
   runApp(
@@ -37,6 +43,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        textTheme: GoogleFonts.josefinSansTextTheme(),
+      ),
       home: ItemList(),
     );
   }
