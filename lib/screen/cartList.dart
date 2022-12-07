@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../main.dart';
@@ -12,8 +10,12 @@ class CartList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Lists'),
+        title: Text(
+          'Replant Bangladesh',
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
+        backgroundColor: baseColor,
       ),
       body: Column(
         children: [
@@ -37,7 +39,7 @@ class CartList extends StatelessWidget {
                       title: Text(
                         cartList[index],
                         style: GoogleFonts.cabin(
-                          textStyle: TextStyle(fontSize: 15),
+                          textStyle: TextStyle(fontSize: 20),
                         ),
                       ),
                       trailing: IconButton(
