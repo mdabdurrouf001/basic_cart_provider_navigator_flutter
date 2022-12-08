@@ -5,9 +5,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../main.dart';
 
-class ItemList extends StatelessWidget {
+class ItemList extends StatefulWidget {
   const ItemList({super.key});
 
+  @override
+  State<ItemList> createState() => _ItemListState();
+}
+
+class _ItemListState extends State<ItemList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -186,6 +191,20 @@ class CartButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
+        final message = SnackBar(
+          content: Text(
+            "'${plantNames[index]}' added in Cart",
+            style: TextStyle(color: fontColor),
+          ),
+          padding: const EdgeInsets.all(18.0),
+          duration: const Duration(seconds: 1),
+          backgroundColor: primaryColor,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+          behavior: SnackBarBehavior.floating,
+          elevation: 6.0,
+        );
+        ScaffoldMessenger.of(context).showSnackBar(message);
+
         var operations = context.read<Operations>();
         operations.addItem(plantNames[index]);
       },

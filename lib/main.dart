@@ -1,12 +1,10 @@
-import 'package:basic_cart_provider_navigator_flutter/screen/cartList.dart';
-import 'package:basic_cart_provider_navigator_flutter/screen/itemList.dart';
-import 'package:basic_cart_provider_navigator_flutter/screen/splashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-
-// ignore: import_of_legacy_library_into_null_safe
+import 'package:basic_cart_provider_navigator_flutter/screen/cartList.dart';
+import 'package:basic_cart_provider_navigator_flutter/screen/itemList.dart';
+import 'package:basic_cart_provider_navigator_flutter/screen/splashScreen.dart';
 
 List<String> itemList = [
   "Ball Cactus",

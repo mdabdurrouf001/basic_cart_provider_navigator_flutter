@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
       splash: 'assets/replantlogo.png', //Image.asset('assets/replantlogo.png'),
-      duration: 4000,
+      duration: 2000,
       nextScreen: ItemList(),
       splashTransition: SplashTransition.fadeTransition,
       splashIconSize: 350,
